@@ -1,0 +1,30 @@
+#==================================================
+# Table of Contents
+#==================================================
+<% if namespaced? -%>
+# <%= namespace_human %>
+  # <%= file_name_human %>
+    # Methods
+
+<%= language %>:
+  helpers:
+    <%= namespace_table %>:
+      <%= file_name_table %>:
+
+        # Methods
+        #--------------------------------------------------
+        methods:
+          todo: "TODO"
+<% else -%>
+# <%= file_name_human %>
+  # Methods
+
+<%= language %>:
+  helpers:
+    <%= file_name_table %>:
+
+      # Methods
+      #--------------------------------------------------
+      methods:
+        todo: "TODO"
+<% end -%>

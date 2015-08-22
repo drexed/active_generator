@@ -1,0 +1,22 @@
+#==================================================
+# Table of Contents
+#==================================================
+# V1 Social
+  # Twitter
+    # Actions
+    # Methods
+
+gb:
+  controllers:
+    v1_social:
+      twitter:
+
+        # Actions
+        #--------------------------------------------------
+        actions:
+          todo: "TODO"
+
+        # Methods
+        #--------------------------------------------------
+        methods:
+          todo: "TODO"

@@ -1,0 +1,8 @@
+Description:
+    Generate a locale file for a mailer
+
+Example:
+    rails generate locale:mailer NAME gb
+
+    This will create:
+        config/locales/gb/mailers/NAME.yml

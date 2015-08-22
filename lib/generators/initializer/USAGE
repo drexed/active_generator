@@ -1,0 +1,8 @@
+Description:
+    Generate an initializer file
+
+Example:
+    rails generate initializer NAME
+
+    This will create:
+        config/initializers/NAME.yml

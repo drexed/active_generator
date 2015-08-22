@@ -1,0 +1,8 @@
+Description:
+    Generate a locale file for an API
+
+Example:
+    rails generate locale:api NAME gb
+
+    This will create:
+        config/locales/gb/apis/NAME.yml

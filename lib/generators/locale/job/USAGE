@@ -1,0 +1,8 @@
+Description:
+    Generate a locale file for a job
+
+Example:
+    rails generate locale:job NAME gb
+
+    This will create:
+        config/locales/gb/jobs/NAME.yml

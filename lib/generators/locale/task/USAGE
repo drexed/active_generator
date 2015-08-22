@@ -1,0 +1,8 @@
+Description:
+    Generate a locale file for a task
+
+Example:
+    rails generate locale:task NAME gb
+
+    This will create:
+        config/locales/gb/tasks/NAME.yml

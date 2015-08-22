@@ -1,0 +1,8 @@
+Description:
+    Generate a locale file for a view
+
+Example:
+    rails generate locale:view NAME gb
+
+    This will create:
+        config/locales/gb/views/NAME.yml

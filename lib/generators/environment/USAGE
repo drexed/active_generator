@@ -1,0 +1,8 @@
+Description:
+    Generate an environment file
+
+Example:
+    rails generate environment NAME [ENVIRONMENT]
+
+    This will create:
+        config/environment/NAME.yml

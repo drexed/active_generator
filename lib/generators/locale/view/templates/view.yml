@@ -1,0 +1,42 @@
+#==================================================
+# Table of Contents
+#==================================================
+<% if namespaced? -%>
+# <%= namespace_human %>
+  # <%= file_name_human %>
+    # Actions
+    # Concerns
+
+<%= language %>:
+  views:
+    <%= namespace_table %>:
+      <%= file_name_table %>:
+
+        # Actions
+        #--------------------------------------------------
+        actions:
+          todo: "TODO"
+
+        # Concerns
+        #--------------------------------------------------
+        concerns:
+          todo: "TODO"
+<% else -%>
+# <%= file_name_human %>
+  # Actions
+  # Concerns
+
+<%= language %>:
+  views:
+    <%= file_name_table %>:
+
+      # Actions
+      #--------------------------------------------------
+      actions:
+        todo: "TODO"
+
+      # Concerns
+      #--------------------------------------------------
+      concerns:
+        todo: "TODO"
+<% end -%>

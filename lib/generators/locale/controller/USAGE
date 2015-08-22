@@ -1,0 +1,8 @@
+Description:
+    Generate a locale file for a controller
+
+Example:
+    rails generate locale:controller NAME gb
+
+    This will create:
+        config/locales/gb/controllers/NAME.yml

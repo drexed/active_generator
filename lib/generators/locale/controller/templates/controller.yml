@@ -1,0 +1,42 @@
+#==================================================
+# Table of Contents
+#==================================================
+<% if namespaced? -%>
+# <%= namespace_human %>
+  # <%= file_name_human %>
+    # Actions
+    # Methods
+
+<%= language %>:
+  controllers:
+    <%= namespace_table %>:
+      <%= file_name_table %>:
+
+        # Actions
+        #--------------------------------------------------
+        actions:
+          todo: "TODO"
+
+        # Methods
+        #--------------------------------------------------
+        methods:
+          todo: "TODO"
+<% else -%>
+# <%= file_name_human %>
+  # Actions
+  # Methods
+
+<%= language %>:
+  controllers:
+    <%= file_name_table %>:
+
+      # Actions
+      #--------------------------------------------------
+      actions:
+        todo: "TODO"
+
+      # Methods
+      #--------------------------------------------------
+      methods:
+        todo: "TODO"
+<% end -%>

@@ -1,0 +1,8 @@
+Description:
+    Generate a locale file for a model
+
+Example:
+    rails generate locale:model NAME gb
+
+    This will create:
+        config/locales/gb/models/NAME.yml

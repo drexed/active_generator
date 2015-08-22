@@ -1,0 +1,8 @@
+Description:
+    Generate a view file
+
+Example:
+    rails generate view NAME
+
+    This will create:
+        app/views/NAME.yml

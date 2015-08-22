@@ -1,0 +1,8 @@
+Description:
+    Generate a locale file for a service
+
+Example:
+    rails generate locale:service NAME gb
+
+    This will create:
+        config/locales/gb/services/NAME.yml

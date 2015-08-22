@@ -1,0 +1,8 @@
+Description:
+    Generate a service file
+
+Example:
+    rails generate service NAME
+
+    This will create:
+        app/services/NAME.yml

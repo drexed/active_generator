@@ -1,0 +1,8 @@
+Description:
+    Generate a locale file for a helper
+
+Example:
+    rails generate locale:helper NAME gb
+
+    This will create:
+        config/locales/gb/helpers/NAME.yml

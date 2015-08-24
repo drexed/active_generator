@@ -1,6 +1,6 @@
-require 'rails/generators/rails/model/model_generator'
+require 'rails/generators/active_record/model/model_generator'
 
-module Rails
+module ActiveRecord
   module Generators
     class ModelGenerator
 

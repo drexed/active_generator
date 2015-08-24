@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe Rails::Generators::ModelGenerator, type: :generator do
+describe ActiveRecord::Generators::ModelGenerator, type: :generator do
   destination(File.expand_path("../../tmp", __FILE__))
 
   before(:all) do

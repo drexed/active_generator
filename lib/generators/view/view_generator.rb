@@ -20,4 +20,10 @@ class ViewGenerator < Rails::Generators::NamedBase
     invoke("locale:view", [name]) if ActiveGenerator.configuration.autoload_view_generator_locale
   end
 
+  def generate_test_file
+    unless ["test_unit", nil].include?(ActiveGenerator.configuration.test_framework)
+      invoke("#{ActiveGenerator.configuration.test_framework}:view", [name]) rescue nil
+    end
+  end
+
 end

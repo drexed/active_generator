@@ -9,7 +9,9 @@ module Rails
       end
 
       def generate_test_file
-        invoke("rspec:helper", [name])
+        unless ActiveGenerator.configuration.test_framework.nil?
+          invoke("#{ActiveGenerator.configuration.test_framework}:helper", [name]) rescue nil
+        end
       end
 
     end

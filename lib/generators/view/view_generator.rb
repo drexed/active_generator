@@ -21,7 +21,7 @@ class ViewGenerator < Rails::Generators::NamedBase
   end
 
   def generate_test_file
-    unless ["test_unit", nil].include?(ActiveGenerator.configuration.test_framework)
+    unless ActiveGenerator.configuration.test_framework.nil?
       invoke("#{ActiveGenerator.configuration.test_framework}:view", [name]) rescue nil
     end
   end

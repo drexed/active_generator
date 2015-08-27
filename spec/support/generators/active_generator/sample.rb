@@ -7,4 +7,5 @@ ActiveGenerator.configure do |config|
   config.autoload_service_generator_locale    = true
   config.autoload_task_generator_locale       = true
   config.autoload_view_generator_locale       = true
+  config.test_framework                       = "test_unit"
 end

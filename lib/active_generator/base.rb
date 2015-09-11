@@ -8,7 +8,7 @@ module ActiveGenerator
     end
 
     def file_name_human
-      file_name_table.split("_").map { |w| w.capitalize }.join(" ")
+      file_name_table.gsub("_", " ").downcase.capitalize
     end
 
     def namespace
@@ -20,7 +20,7 @@ module ActiveGenerator
     end
 
     def namespace_human
-      namespace.map { |w| w.capitalize }.join(" ")
+      namespace.join(" ").gsub("_", " ").downcase.capitalize
     end
 
     def namespace_table

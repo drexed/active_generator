@@ -5,6 +5,7 @@
 # <%= namespace_human %>
   # <%= file_name_human %>
     # Methods
+      # TODO
 
 <%= language %>:
   uploaders:
@@ -22,6 +23,7 @@
 <% else -%>
 # <%= file_name_human %>
   # Methods
+    # TODO
 
 <%= language %>:
   uploaders:

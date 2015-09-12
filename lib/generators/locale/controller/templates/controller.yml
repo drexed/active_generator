@@ -5,7 +5,9 @@
 # <%= namespace_human %>
   # <%= file_name_human %>
     # Actions
+      # TODO
     # Methods
+      # TODO
 
 <%= language %>:
   controllers:
@@ -32,7 +34,9 @@
 <% else -%>
 # <%= file_name_human %>
   # Actions
+    # TODO
   # Methods
+    # TODO
 
 <%= language %>:
   controllers:

@@ -1,10 +1,10 @@
 class EnvironmentGenerator < Rails::Generators::NamedBase
   source_root File.expand_path('../templates', __FILE__)
-  argument :environment, type: :string, required: false, default: nil, desc: "The environment template to copy"
+  argument :environment, type: :string, required: false, default: nil, desc: 'The environment template to copy'
 
   def create_environment_file
     assert_valid_environment!
-    template("environment.rb", File.join("config/environments", class_path, "#{file_name}.rb"))
+    template('environment.rb'.freeze, File.join('config/environments'.freeze, class_path, "#{file_name}.rb"))
   end
 
   private
@@ -19,7 +19,7 @@ class EnvironmentGenerator < Rails::Generators::NamedBase
     unless environment.nil?
       unless ENVIRONMENTS.include?(environment)
         raise ArgumentError,
-            "Unknown environment: #{environment.inspect}. Valid environments are: #{ENVIRONMENTS.map(&:inspect).join(', ')}"
+          "Unknown environment: #{environment.inspect}. Valid environments are: #{ENVIRONMENTS.map(&:inspect).join(', '.freeze)}"
       end
     end
   end

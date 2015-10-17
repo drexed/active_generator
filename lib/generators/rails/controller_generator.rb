@@ -6,7 +6,7 @@ module Erb
     class ControllerGenerator
 
       def generate_locale_file
-        invoke("locale:view", [name]) if ActiveGenerator.configuration.autoload_view_generator_locale
+        invoke('locale:view'.freeze, [name]) if ActiveGenerator.configuration.autoload_view_generator_locale
       end
 
       def generate_test_file
@@ -24,7 +24,7 @@ module Rails
     class ControllerGenerator
 
       def generate_locale_file
-        invoke("locale:controller", [name]) if ActiveGenerator.configuration.autoload_controller_generator_locale
+        invoke('locale:controller'.freeze, [name]) if ActiveGenerator.configuration.autoload_controller_generator_locale
       end
 
       def generate_test_file

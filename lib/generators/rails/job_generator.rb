@@ -5,7 +5,7 @@ module Rails
     class JobGenerator
 
       def generate_locale_file
-        invoke("locale:job", [name]) if ActiveGenerator.configuration.autoload_job_generator_locale
+        invoke('locale:job'.freeze, [name]) if ActiveGenerator.configuration.autoload_job_generator_locale
       end
 
       def generate_test_file

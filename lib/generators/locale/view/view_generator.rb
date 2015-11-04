@@ -11,7 +11,7 @@ module Locale
 
     def create_view_file
       assert_valid_language!
-      template('view.yml'.freeze, File.join("config/locales/#{language}/views", namespace_path, "#{file_name}.yml"))
+      template('view.yml', File.join("config/locales/#{language}/views", namespace_path, "#{file_name}.yml"))
     end
 
   end

@@ -11,7 +11,7 @@ module Locale
 
     def create_job_file
       assert_valid_language!
-      template('job.yml'.freeze, File.join("config/locales/#{language}/jobs", namespace_path, "#{file_name}.yml"))
+      template('job.yml', File.join("config/locales/#{language}/jobs", namespace_path, "#{file_name}.yml"))
     end
 
   end

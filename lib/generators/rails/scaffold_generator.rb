@@ -5,7 +5,7 @@ module Erb
     class ScaffoldGenerator
 
       def generate_locale_file
-        invoke('locale:view'.freeze, [name]) if ActiveGenerator.configuration.autoload_view_generator_locale
+        invoke('locale:view', [name]) if ActiveGenerator.configuration.autoload_view_generator_locale
       end
 
       def generate_test_file

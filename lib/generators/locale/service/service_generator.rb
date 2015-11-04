@@ -11,7 +11,7 @@ module Locale
 
     def create_service_file
       assert_valid_language!
-      template('service.yml'.freeze, File.join("config/locales/#{language}/services", namespace_path, "#{file_name}.yml"))
+      template('service.yml', File.join("config/locales/#{language}/services", namespace_path, "#{file_name}.yml"))
     end
 
   end

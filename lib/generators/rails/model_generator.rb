@@ -11,7 +11,7 @@ module ActiveRecord
       end
 
       def generate_locale_file
-        invoke('locale:model'.freeze, [name]) if ActiveGenerator.configuration.autoload_model_generator_locale
+        invoke('locale:model', [name]) if ActiveGenerator.configuration.autoload_model_generator_locale
       end
 
       def generate_test_file

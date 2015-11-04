@@ -11,7 +11,7 @@ module Locale
 
     def create_helper_file
       assert_valid_language!
-      template('helper.yml'.freeze, File.join("config/locales/#{language}/helpers", namespace_path, "#{file_name}.yml"))
+      template('helper.yml', File.join("config/locales/#{language}/helpers", namespace_path, "#{file_name}.yml"))
     end
 
   end

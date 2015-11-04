@@ -11,7 +11,7 @@ module Locale
 
     def copy_task_file
       assert_valid_language!
-      template('task.yml'.freeze, File.join("config/locales/#{language}/tasks", namespace_path, "#{file_name}.yml"))
+      template('task.yml', File.join("config/locales/#{language}/tasks", namespace_path, "#{file_name}.yml"))
     end
 
   end

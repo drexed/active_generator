@@ -11,7 +11,7 @@ module Locale
 
     def create_uploader_file
       assert_valid_language!
-      template('uploader.yml'.freeze, File.join("config/locales/#{language}/uploaders", namespace_path, "#{file_name}.yml"))
+      template('uploader.yml', File.join("config/locales/#{language}/uploaders", namespace_path, "#{file_name}.yml"))
     end
 
   end

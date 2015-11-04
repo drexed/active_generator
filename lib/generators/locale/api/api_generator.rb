@@ -11,7 +11,7 @@ module Locale
 
     def create_api_file
       assert_valid_language!
-      template('api.yml'.freeze, File.join("config/locales/#{language}/apis", namespace_path, "#{file_name}.yml"))
+      template('api.yml', File.join("config/locales/#{language}/apis", namespace_path, "#{file_name}.yml"))
     end
 
   end

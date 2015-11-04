@@ -5,7 +5,7 @@ module Rails
     class HelperGenerator
 
       def generate_locale_file
-        invoke('locale:helper'.freeze, [name]) if ActiveGenerator.configuration.autoload_helper_generator_locale
+        invoke('locale:helper', [name]) if ActiveGenerator.configuration.autoload_helper_generator_locale
       end
 
       def generate_test_file

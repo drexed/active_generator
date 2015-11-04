@@ -11,7 +11,7 @@ module Locale
 
     def create_model_file
       assert_valid_language!
-      template('model.yml'.freeze, File.join("config/locales/#{language}/models", namespace_path, "#{file_name}.yml"))
+      template('model.yml', File.join("config/locales/#{language}/models", namespace_path, "#{file_name}.yml"))
     end
 
   end

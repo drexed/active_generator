@@ -5,7 +5,6 @@
 # <%= namespace_human %>
   # <%= file_name_human %>
     # Attributes
-      # TODO
     # Methods
       # TODO
 
@@ -31,7 +30,6 @@
 <% else -%>
 # <%= file_name_human %>
   # Attributes
-    # TODO
   # Methods
     # TODO
 

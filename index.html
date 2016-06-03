@@ -1,0 +1,236 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>ActiveGenerator by drexed</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-light.css">
+    <meta name="viewport" content="width=device-width">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>ActiveGenerator</h1>
+        <p>Gem for commonly used generators.</p>
+
+        <p class="view"><a href="https://github.com/drexed/active_generator">View the Project on GitHub <small>drexed/active_generator</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/drexed/active_generator/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/drexed/active_generator/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/drexed/active_generator">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>
+<a id="activegenerator" class="anchor" href="#activegenerator" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>ActiveGenerator</h1>
+
+<p><a href="http://badge.fury.io/rb/active_generator"><img src="https://badge.fury.io/rb/active_generator.svg" alt="Gem Version"></a>
+<a href="https://travis-ci.org/drexed/active_generator"><img src="https://travis-ci.org/drexed/active_generator.svg?branch=master" alt="Build Status"></a>
+<a href="https://coveralls.io/r/drexed/active_generator"><img src="https://coveralls.io/repos/drexed/active_generator/badge.png" alt="Coverage Status"></a></p>
+
+<p>ActiveGenerator extends the base rails generators with commonly used generators.</p>
+
+<h2>
+<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Installation</h2>
+
+<p>Add this line to your application's Gemfile:</p>
+
+<div class="highlight highlight-source-ruby"><pre><span class="pl-k">gem</span> <span class="pl-s"><span class="pl-pds">'</span>active_generator<span class="pl-pds">'</span></span></pre></div>
+
+<p>And then execute:</p>
+
+<pre><code>$ bundle
+</code></pre>
+
+<p>Or install it yourself as:</p>
+
+<pre><code>$ gem install active_generator
+</code></pre>
+
+<h2>
+<a id="table-of-contents" class="anchor" href="#table-of-contents" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Table of Contents</h2>
+
+<ul>
+<li><a href="#configuration">Configuration</a></li>
+<li><a href="#environment">Environment</a></li>
+<li><a href="#initializer">Initializer</a></li>
+<li><a href="#locale">Locale</a></li>
+<li><a href="#service">Service</a></li>
+<li><a href="#view">View</a></li>
+</ul>
+
+<h2>
+<a id="configuration" class="anchor" href="#configuration" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Configuration</h2>
+
+<p>Generates an environment file in the <code>config/initalizers</code> directory.</p>
+
+<p><strong>Options:</strong></p>
+
+<ul>
+<li>autoload_controller_generator_locale</li>
+<li>autoload_helper_generator_locale</li>
+<li>autoload_job_generator_locale</li>
+<li>autoload_mailer_generator_locale</li>
+<li>autoload_model_generator_locale</li>
+<li>autoload_service_generator_locale</li>
+<li>autoload_task_generator_locale</li>
+<li>autoload_view_generator_locale</li>
+</ul>
+
+<p><code>rails generate active_generator:install</code> will generate the following <code>active_generator.rb</code> file:</p>
+
+<div class="highlight highlight-source-ruby"><pre><span class="pl-c"># config/initalizers/active_generator.rb</span>
+
+<span class="pl-c1">ActiveGenerator</span>.configure <span class="pl-k">do </span>|<span class="pl-smi">config</span>|
+  <span class="pl-c"># option = default</span>
+
+  config.autoload_controller_generator_locale <span class="pl-k">=</span> <span class="pl-c1">true</span>
+  config.autoload_helper_generator_locale     <span class="pl-k">=</span> <span class="pl-c1">true</span>
+  config.autoload_job_generator_locale        <span class="pl-k">=</span> <span class="pl-c1">true</span>
+  config.autoload_mailer_generator_locale     <span class="pl-k">=</span> <span class="pl-c1">true</span>
+  config.autoload_model_generator_locale      <span class="pl-k">=</span> <span class="pl-c1">true</span>
+  config.autoload_service_generator_locale    <span class="pl-k">=</span> <span class="pl-c1">true</span>
+  config.autoload_task_generator_locale       <span class="pl-k">=</span> <span class="pl-c1">true</span>
+  config.autoload_view_generator_locale       <span class="pl-k">=</span> <span class="pl-c1">true</span>
+  config.test_framework                       <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">"</span>test_unit<span class="pl-pds">"</span></span>
+<span class="pl-k">end</span></pre></div>
+
+<h2>
+<a id="environment" class="anchor" href="#environment" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Environment</h2>
+
+<p>Generates an environment file in the <code>config/environments</code> directory.</p>
+
+<p><strong>Options:</strong></p>
+
+<ul>
+<li>environment: development, test, production</li>
+</ul>
+
+<p><code>rails generate environment staging production</code> will generate the following <code>staging.rb</code> file:</p>
+
+<div class="highlight highlight-source-ruby"><pre><span class="pl-c"># config/environments/staging.rb</span>
+
+<span class="pl-c1">Rails</span>.application.configure <span class="pl-k">do</span>
+  <span class="pl-c"># Settings specified here will take precedence over those in config/application.rb.</span>
+
+  <span class="pl-k">~~~~~~~~~~~~~~~~~~</span> <span class="pl-c1">OMITED</span> <span class="pl-c1">IN</span> <span class="pl-c1">README</span> <span class="pl-k">~~~~~~~~~~~~~~~~~~</span>
+<span class="pl-k">end</span></pre></div>
+
+<h2>
+<a id="initializer" class="anchor" href="#initializer" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Initializer</h2>
+
+<p>Generates an initializer file in the <code>config/initializers</code> directory.</p>
+
+<p><code>rails generate initializer stripe</code> will generate the following <code>stripe.rb</code> file:</p>
+
+<div class="highlight highlight-source-ruby"><pre><span class="pl-c"># config/initializers/stripe.rb</span>
+
+<span class="pl-c"># TODO:</span>
+  <span class="pl-c"># Add initializer code here.</span></pre></div>
+
+<h2>
+<a id="locale" class="anchor" href="#locale" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Locale</h2>
+
+<p>Generates an initializer file in the <code>config/locales</code> directory.</p>
+
+<p><strong>Generators:</strong></p>
+
+<ul>
+<li>api</li>
+<li>controller</li>
+<li>helper</li>
+<li>job</li>
+<li>mailer</li>
+<li>model</li>
+<li>service</li>
+<li>task</li>
+<li>uploader</li>
+<li>view</li>
+</ul>
+
+<p><strong>Options:</strong></p>
+
+<ul>
+<li>language: 2, 4, 6, and 6 character prefix</li>
+</ul>
+
+<p><code>rails generate locale:controller admin/user en-GB</code> will generate the following <code>user.yml</code> file:</p>
+
+<div class="highlight highlight-source-ruby"><pre><span class="pl-c"># config/locales/en-GB/controller/admin/user.yml</span>
+
+<span class="pl-c">#==================================================</span>
+<span class="pl-c"># Table of Contents</span>
+<span class="pl-c">#==================================================</span>
+<span class="pl-c"># V1</span>
+  <span class="pl-c"># Test</span>
+    <span class="pl-c"># Actions</span>
+    <span class="pl-c"># Methods</span>
+
+en<span class="pl-k">-</span><span class="pl-c1">GB:</span>
+  <span class="pl-c1">controllers:</span>
+    <span class="pl-c1">v1:</span>
+      <span class="pl-c1">test:</span>
+
+        <span class="pl-c"># Actions</span>
+        <span class="pl-c">#--------------------------------------------------</span>
+        <span class="pl-c1">actions:</span>
+          <span class="pl-c1">todo:</span> <span class="pl-s"><span class="pl-pds">"</span>TODO<span class="pl-pds">"</span></span>
+
+        <span class="pl-c"># Methods</span>
+        <span class="pl-c">#--------------------------------------------------</span>
+        <span class="pl-c1">methods:</span>
+          <span class="pl-c1">todo:</span> <span class="pl-s"><span class="pl-pds">"</span>TODO<span class="pl-pds">"</span></span></pre></div>
+
+<h2>
+<a id="service" class="anchor" href="#service" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Service</h2>
+
+<p>Generates an service file in the <code>app/services</code> directory.</p>
+
+<p><code>rails generate service social/twitter</code> will generate the following <code>twitter.rb</code> file:</p>
+
+<div class="highlight highlight-source-ruby"><pre><span class="pl-c"># app/services/social/twitter.rb</span>
+
+<span class="pl-k">class</span> <span class="pl-en">Social::Twitter</span>
+  <span class="pl-c"># TODO:</span>
+    <span class="pl-c"># Add service code here.</span>
+<span class="pl-k">end</span></pre></div>
+
+<h2>
+<a id="view" class="anchor" href="#view" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>View</h2>
+
+<p>Generates an view file in the <code>app/views</code> directory.</p>
+
+<p><code>rails generate view social/twitter index</code> will generate the following <code>index.html.erb</code> file:</p>
+
+<div class="highlight highlight-source-ruby"><pre><span class="pl-c"># app/views/social/twitter/index.html.erb</span>
+
+<span class="pl-k">&lt;</span>!<span class="pl-k">--</span> <span class="pl-c1">TODO:</span> <span class="pl-k">--</span><span class="pl-k">&gt;</span>
+  <span class="pl-k">&lt;</span>!<span class="pl-k">--</span> <span class="pl-c1">Add</span> view code here. <span class="pl-k">--</span><span class="pl-k">&gt;</span></pre></div>
+
+<h2>
+<a id="contributing" class="anchor" href="#contributing" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Contributing</h2>
+
+<ol>
+<li>Fork it ( <a href="https://github.com/%5Bmy-github-username%5D/active_generator/fork">https://github.com/[my-github-username]/active_generator/fork</a> )</li>
+<li>Create your feature branch (<code>git checkout -b my-new-feature</code>)</li>
+<li>Commit your changes (<code>git commit -am 'Add some feature'</code>)</li>
+<li>Push to the branch (<code>git push origin my-new-feature</code>)</li>
+<li>Create a new Pull Request</li>
+</ol>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/drexed">drexed</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>

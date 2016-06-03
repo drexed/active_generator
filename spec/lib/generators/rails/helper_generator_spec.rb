@@ -1,4 +1,4 @@
-require 'spec_helper'
+require "spec_helper"
 
 describe Rails::Generators::HelperGenerator, type: :generator do
   destination(File.expand_path("../../tmp", __FILE__))

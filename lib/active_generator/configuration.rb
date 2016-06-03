@@ -12,14 +12,14 @@ class ActiveGenerator::Configuration
 
   def initialize
     @autoload_controller_generator_locale = true
-    @autoload_helper_generator_locale     = true
-    @autoload_job_generator_locale        = true
-    @autoload_mailer_generator_locale     = true
-    @autoload_model_generator_locale      = true
-    @autoload_service_generator_locale    = true
-    @autoload_task_generator_locale       = true
-    @autoload_view_generator_locale       = true
-    @test_framework                       = :test_unit
+    @autoload_helper_generator_locale = true
+    @autoload_job_generator_locale = true
+    @autoload_mailer_generator_locale = true
+    @autoload_model_generator_locale = true
+    @autoload_service_generator_locale = true
+    @autoload_task_generator_locale = true
+    @autoload_view_generator_locale = true
+    @test_framework = "test_unit"
   end
 
 end

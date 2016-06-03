@@ -1,6 +1,5 @@
 require "rails/generators"
 
-require "active_object"
 require "active_generator/version"
 require "active_generator/configuration"
 

@@ -1,4 +1,4 @@
-require 'spec_helper'
+require "spec_helper"
 
 describe EnvironmentGenerator, type: :generator do
   destination(File.expand_path("../../tmp", __FILE__))

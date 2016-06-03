@@ -2,7 +2,7 @@
 
 [![Gem Version](https://badge.fury.io/rb/active_generator.svg)](http://badge.fury.io/rb/active_generator)
 [![Build Status](https://travis-ci.org/drexed/active_generator.svg?branch=master)](https://travis-ci.org/drexed/active_generator)
-[![Coverage Status](https://coveralls.io/repos/drexed/active_generator/badge.png)](https://coveralls.io/r/drexed/active_generator)
+[![Coverage Status](https://coveralls.io/repos/github/drexed/active_generator/badge.svg?branch=master)](https://coveralls.io/github/drexed/active_generator?branch=master)
 
 ActiveGenerator extends the base rails generators with commonly used generators.
 
@@ -11,7 +11,7 @@ ActiveGenerator extends the base rails generators with commonly used generators.
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'active_generator'
+gem "active_generator"
 ```
 
 And then execute:
@@ -175,8 +175,10 @@ Generates an view file in the `app/views` directory.
 
 ## Contributing
 
-1. Fork it ( https://github.com/[my-github-username]/active_generator/fork )
+Your contribution is welcome.
+
+1. Fork it
 2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
+3. Commit your changes (`git commit -am 'Added some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
-5. Create a new Pull Request
+5. Create new Pull Request

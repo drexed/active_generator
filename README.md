@@ -50,18 +50,16 @@ Generates an environment file in the `config/initalizers` directory.
 ```ruby
 # config/initalizers/active_generator.rb
 
-ActiveGenerator.configure do |config|
-  # option = default
-
+ActiveGenerator::Settings.configure do |config|
   config.autoload_controller_generator_locale = true
-  config.autoload_helper_generator_locale     = true
-  config.autoload_job_generator_locale        = true
-  config.autoload_mailer_generator_locale     = true
-  config.autoload_model_generator_locale      = true
-  config.autoload_service_generator_locale    = true
-  config.autoload_task_generator_locale       = true
-  config.autoload_view_generator_locale       = true
-  config.test_framework                       = 'test_unit'
+  config.autoload_helper_generator_locale = true
+  config.autoload_job_generator_locale = true
+  config.autoload_mailer_generator_locale = true
+  config.autoload_model_generator_locale = true
+  config.autoload_service_generator_locale = true
+  config.autoload_task_generator_locale = true
+  config.autoload_view_generator_locale = true
+  config.test_framework = 'test_unit'
 end
 ```
 

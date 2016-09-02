@@ -1,4 +1,7 @@
 ---
+exclude_paths:
+  - lib/generators/environment/templates
+  - lib/generators/service/templates
 Attribute:
   enabled: false
 IrresponsibleModule:
@@ -9,6 +12,8 @@ ManualDispatch:
   enabled: false
 NestedIterators:
   max_allowed_nesting: 2
+PrimaDonnaMethod:
+  enabled: false
 TooManyStatements:
   max_statements: 10
 UtilityFunction:

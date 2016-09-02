@@ -1,16 +1,20 @@
 require 'rails/generators/rails/helper/helper_generator'
+require 'generators/rails/base'
 
 module Rails
   module Generators
     class HelperGenerator
+      include Rails::Base
 
       def generate_locale_file
-        invoke('locale:helper', [name]) if ActiveGenerator.configuration.autoload_helper_generator_locale
+        invoke('locale:helper', [name]) if configuration.autoload_helper_generator_locale
       end
 
       def generate_test_file
-        unless ActiveGenerator.configuration.test_framework.nil?
-          invoke("#{ActiveGenerator.configuration.test_framework}:helper", [name]) rescue nil
+        framework = configuration.test_framework
+
+        unless framework.nil?
+          invoke("#{framework}:helper", [name]) rescue nil
         end
       end
 

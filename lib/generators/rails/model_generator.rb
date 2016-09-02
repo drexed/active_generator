@@ -1,26 +1,30 @@
 require 'rails/generators/active_record/model/model_generator'
+require 'generators/rails/base'
 
 module ActiveRecord
   module Generators
     class ModelGenerator
+      include Rails::Base
 
       def create_migration_file
         # return unless options[:migration] && options[:parent].nil?
 
         if options[:indexes] == false
-          attributes.each { |a| a.attr_options.delete(:index) if a.reference? && !a.has_index? }
+          attributes.each { |attr| attr.attr_options.delete(:index) if attr.reference? && !attr.has_index? }
         end
 
         migration_template '../../migration/templates/create_table_migration.rb', "db/migrate/create_#{table_name}.rb"
       end
 
       def generate_locale_file
-        invoke('locale:model', [name]) if ActiveGenerator.configuration.autoload_model_generator_locale
+        invoke('locale:model', [name]) if configuration.autoload_model_generator_locale
       end
 
       def generate_test_file
-        unless ActiveGenerator.configuration.test_framework.nil?
-          invoke("#{ActiveGenerator.configuration.test_framework}:model", [name]) rescue nil
+        framework = configuration.test_framework
+
+        unless framework.nil?
+          invoke("#{framework}:model", [name]) rescue nil
         end
       end
 

@@ -1,8 +1,10 @@
 require 'rails/generators/erb/scaffold/scaffold_generator'
+require 'generators/rails/base'
 
 module Erb
   module Generators
     class ScaffoldGenerator
+      include Rails::Base
 
       def generate_locale_file
         invoke('locale:view', [name]) if configuration.autoload_view_generator_locale
@@ -13,12 +15,6 @@ module Erb
 
         return if framework.nil?
         invoke("#{framework}:view", [name]) rescue nil
-      end
-
-      private
-
-      def configuration
-        ActiveGenerator.configuration
       end
 
     end

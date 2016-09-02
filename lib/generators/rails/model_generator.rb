@@ -1,8 +1,10 @@
 require 'rails/generators/active_record/model/model_generator'
+require 'generators/rails/base'
 
 module ActiveRecord
   module Generators
     class ModelGenerator
+      include Rails::Base
 
       def create_migration_file
         # return unless options[:migration] && options[:parent].nil?
@@ -23,12 +25,6 @@ module ActiveRecord
 
         return if framework.nil?
         invoke("#{framework}:model", [name]) rescue nil
-      end
-
-      private
-
-      def configuration
-        ActiveGenerator.configuration
       end
 
     end

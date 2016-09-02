@@ -35,16 +35,6 @@ Or install it yourself as:
 
 Generates an environment file in the `config/initalizers` directory.
 
-**Options:**
- * autoload_controller_generator_locale
- * autoload_helper_generator_locale
- * autoload_job_generator_locale
- * autoload_mailer_generator_locale
- * autoload_model_generator_locale
- * autoload_service_generator_locale
- * autoload_task_generator_locale
- * autoload_view_generator_locale
-
 `rails generate active_generator:install` will generate the following `active_generator.rb` file:
 
 ```ruby

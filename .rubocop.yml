@@ -2,6 +2,11 @@ AllCops:
   DisplayCopNames: true
   DisplayStyleGuide: true
   TargetRubyVersion: 2.3
+  Exclude:
+    - 'lib/generators/environment/templates/*'
+    - 'lib/generators/initializer/templates/*'
+    - 'lib/generators/service/templates/*'
+    - 'spec/support/**/*'
 LineLength:
   Max: 120
 Rails/Delegate:

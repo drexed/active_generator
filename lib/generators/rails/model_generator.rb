@@ -6,7 +6,11 @@ module ActiveRecord
 
       def create_migration_file
         # return unless options[:migration] && options[:parent].nil?
-        attributes.each { |a| a.attr_options.delete(:index) if a.reference? && !a.has_index? } if options[:indexes] == false
+
+        if options[:indexes] == false
+          attributes.each { |a| a.attr_options.delete(:index) if a.reference? && !a.has_index? }
+        end
+
         migration_template '../../migration/templates/create_table_migration.rb', "db/migrate/create_#{table_name}.rb"
       end
 

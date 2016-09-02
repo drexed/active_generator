@@ -1,4 +1,4 @@
-ActiveGenerator.configure do |config|
+ActiveGenerator::Settings.configure do |config|
   config.autoload_controller_generator_locale = true
   config.autoload_helper_generator_locale = true
   config.autoload_job_generator_locale = true

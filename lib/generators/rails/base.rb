@@ -4,7 +4,7 @@ module Rails
     private
 
     def configuration
-      ActiveGenerator.configuration
+      ActiveGenerator::Settings.config
     end
 
   end

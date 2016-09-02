@@ -30,7 +30,7 @@ class ViewGenerator < Rails::Generators::NamedBase
   private
 
   def configuration
-    ActiveGenerator.configuration
+    ActiveGenerator::Settings.config
   end
 
 end

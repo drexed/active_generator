@@ -1,10 +1,8 @@
 require 'rails/generators/job/job_generator'
-require 'generators/rails/base'
 
 module Rails
   module Generators
     class JobGenerator
-      include Rails::Base
 
       def generate_locale_file
         invoke('locale:job', [name]) if configuration.autoload_job_generator_locale
@@ -13,9 +11,14 @@ module Rails
       def generate_test_file
         framework = configuration.test_framework
 
-        unless framework.nil?
-          invoke("#{framework}:job", [name]) rescue nil
-        end
+        return if framework.nil?
+        invoke("#{framework}:job", [name]) rescue nil
+      end
+
+      private
+
+      def configuration
+        ActiveGenerator.configuration
       end
 
     end

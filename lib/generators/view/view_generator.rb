@@ -23,9 +23,8 @@ class ViewGenerator < Rails::Generators::NamedBase
   def generate_test_file
     framework = configuration.test_framework
 
-    unless framework.nil?
-      invoke("#{framework}:view", [name]) rescue nil
-    end
+    return if framework.nil?
+    invoke("#{framework}:view", [name]) rescue nil
   end
 
   private

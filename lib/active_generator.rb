@@ -1,7 +1,7 @@
-require "rails/generators"
+require 'rails/generators'
 
-require "active_generator/version"
-require "active_generator/configuration"
+require 'active_generator/version'
+require 'active_generator/configuration'
 
 module ActiveGenerator
 
@@ -23,7 +23,7 @@ module ActiveGenerator
 
 end
 
-require "generators/active_generator/install/install_generator"
+require 'generators/active_generator/install/install_generator'
 
 %w(environment initializer service view).each do |generator_name|
   require "generators/#{generator_name}/#{generator_name}_generator"

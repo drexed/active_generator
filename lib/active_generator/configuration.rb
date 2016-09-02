@@ -19,7 +19,7 @@ class ActiveGenerator::Configuration
     @autoload_service_generator_locale = true
     @autoload_task_generator_locale = true
     @autoload_view_generator_locale = true
-    @test_framework = "test_unit"
+    @test_framework = 'test_unit'
   end
 
 end

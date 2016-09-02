@@ -8,27 +8,27 @@ module ActiveGenerator
     end
 
     def file_name_human
-      file_name_table.gsub("_".freeze, " ".freeze).downcase.capitalize
+      file_name_table.gsub('_', ' ').downcase.capitalize
     end
 
     def namespace
-      name.downcase.split("/".freeze)[0...-1]
+      name.downcase.split('/')[0...-1]
     end
 
     def namespaced?
-      name.include?("/".freeze)
+      name.include?('/')
     end
 
     def namespace_human
-      namespace.join(" ".freeze).gsub("_".freeze, " ".freeze).downcase.capitalize
+      namespace.join(' ').gsub('_', ' ').downcase.capitalize
     end
 
     def namespace_table
-      namespace.join("_".freeze)
+      namespace.join('_')
     end
 
     def namespace_path
-      namespace.join("/".freeze)
+      namespace.join('/')
     end
 
   end

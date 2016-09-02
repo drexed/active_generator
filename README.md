@@ -11,7 +11,7 @@ ActiveGenerator extends the base rails generators with commonly used generators.
 Add this line to your application's Gemfile:
 
 ```ruby
-gem "active_generator"
+gem 'active_generator'
 ```
 
 And then execute:
@@ -61,7 +61,7 @@ ActiveGenerator.configure do |config|
   config.autoload_service_generator_locale    = true
   config.autoload_task_generator_locale       = true
   config.autoload_view_generator_locale       = true
-  config.test_framework                       = "test_unit"
+  config.test_framework                       = 'test_unit'
 end
 ```
 
@@ -137,12 +137,12 @@ en-GB:
         # Actions
         #--------------------------------------------------
         actions:
-          todo: "TODO"
+          todo: 'TODO'
 
         # Methods
         #--------------------------------------------------
         methods:
-          todo: "TODO"
+          todo: 'TODO'
 ```
 
 ## Service

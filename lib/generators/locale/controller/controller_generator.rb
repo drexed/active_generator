@@ -11,7 +11,8 @@ module Locale
 
     def create_controller_file
       assert_valid_language!
-      template('controller.yml', File.join("config/locales/#{language}/controllers", namespace_path, "#{file_name}.yml"))
+      template('controller.yml',
+               File.join("config/locales/#{language}/controllers", namespace_path, "#{file_name}.yml"))
     end
 
   end

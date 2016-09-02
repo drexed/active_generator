@@ -9,7 +9,7 @@ class EnvironmentGenerator < Rails::Generators::NamedBase
 
   private
 
-  ENVIRONMENTS = %w(development test production)
+  ENVIRONMENTS = %w(development test production).freeze
 
   ENVIRONMENTS.each do |env|
     define_method("#{env}?") { environment == env }
@@ -19,7 +19,7 @@ class EnvironmentGenerator < Rails::Generators::NamedBase
     unless environment.nil?
       unless ENVIRONMENTS.include?(environment)
         raise ArgumentError,
-          "Unknown environment: #{environment.inspect}. Valid options are: #{ENVIRONMENTS.map(&:inspect).join(', ')}"
+              "Unknown environment: #{environment.inspect}. Valid options: #{ENVIRONMENTS.map(&:inspect).join(', ')}"
       end
     end
   end

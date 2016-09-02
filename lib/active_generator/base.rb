@@ -8,7 +8,7 @@ module ActiveGenerator
     end
 
     def file_name_human
-      file_name_table.gsub('_', ' ').downcase.capitalize
+      file_name_table.tr('_', ' ').downcase.capitalize
     end
 
     def namespace
@@ -20,7 +20,7 @@ module ActiveGenerator
     end
 
     def namespace_human
-      namespace.join(' ').gsub('_', ' ').downcase.capitalize
+      namespace.join(' ').tr('_', ' ').downcase.capitalize
     end
 
     def namespace_table

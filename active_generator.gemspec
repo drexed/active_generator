@@ -9,8 +9,8 @@ Gem::Specification.new do |spec|
   spec.authors = ['Juan Gomez']
   spec.email = ['j.gomez@drexed.com']
 
-  spec.summary = %q{Gem for commonly used generators.}
-  spec.description = %q{Extend the base rails generators with commonly used generators.}
+  spec.summary = 'Gem for commonly used generators.'
+  spec.description = 'Extend the base rails generators with commonly used generators.'
   spec.homepage = 'http://drexed.github.io/active_generator'
   spec.license = 'MIT'
 

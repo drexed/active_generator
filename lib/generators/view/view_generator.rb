@@ -11,7 +11,9 @@ class ViewGenerator < Rails::Generators::NamedBase
   def create_view_file
     unless actions.empty?
       actions.each do |filename|
-        template('view.html.erb', File.join('app/views', class_path, file_name, "#{filename}.html.erb"))
+        path = File.join('app/views', class_path, file_name, "#{filename}.html.erb")
+
+        template('view.html.erb', path)
       end
     end
   end

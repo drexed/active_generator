@@ -33,13 +33,10 @@ Or install it yourself as:
 
 ## Configuration
 
-Generates an environment file in the `config/initalizers` directory.
-
-`rails generate active_generator:install` will generate the following `active_generator.rb` file:
+`rails generate active_generator:install` will generate the following file:
+``../config/initalizers/active_generator.rb``
 
 ```ruby
-# config/initalizers/active_generator.rb
-
 ActiveGenerator::Settings.configure do |config|
   config.autoload_controller_generator_locale = true
   config.autoload_helper_generator_locale = true

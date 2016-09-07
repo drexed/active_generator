@@ -1,9 +1,11 @@
-module Rails::Base
+module Rails
+  module Base
 
-  private
+    private
 
-  def configuration
-    ActiveGenerator::Settings.config
+    def configuration
+      ActiveGenerator::Settings.config
+    end
+
   end
-
 end

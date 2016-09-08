@@ -1,7 +1,4 @@
 ---
-exclude_paths:
-  - lib/generators/environment/templates
-  - lib/generators/service/templates
 Attribute:
   enabled: false
 BooleanParameter:
@@ -12,13 +9,17 @@ FeatureEnvy:
   enabled: false
 IrresponsibleModule:
   enabled: false
-NilCheck:
+LongParameterList:
   enabled: false
 ManualDispatch:
   enabled: false
 NestedIterators:
   max_allowed_nesting: 2
+NilCheck:
+  enabled: false
 PrimaDonnaMethod:
+  enabled: false
+RepeatedConditional:
   enabled: false
 TooManyStatements:
   max_statements: 10

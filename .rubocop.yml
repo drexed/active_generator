@@ -7,6 +7,8 @@ AllCops:
     - 'spec/**/**/*'
 LineLength:
   Max: 100
+Metrics/ClassLength:
+  Enabled: false
 Metrics/ModuleLength:
   Enabled: false
 Style/Alias:

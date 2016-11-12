@@ -122,12 +122,12 @@ en-GB:
         # Actions
         #--------------------------------------------------
         actions:
-          todo: 'TODO'
+          todo: "TODO"
 
         # Methods
         #--------------------------------------------------
         methods:
-          todo: 'TODO'
+          todo: "TODO"
 ```
 
 ## Service

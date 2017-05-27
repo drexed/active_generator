@@ -6,9 +6,8 @@ class ServiceGenerator < Rails::Generators::NamedBase
   end
 
   def generate_locale_file
-    if ActiveGenerator::Settings.config.autoload_service_generator_locale
-      invoke('locale:service', [name])
-    end
+    return unless ActiveGenerator::Settings.config.autoload_service_generator_locale
+    invoke('locale:service', [name])
   end
 
 end

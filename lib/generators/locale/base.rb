@@ -4,10 +4,9 @@ module Locale
     private
 
     def assert_valid_language!
-      unless [2, 4, 5, 6].include?(language.size) && (language =~ /^[A-Za-z-]+$/)
-        raise ArgumentError,
-              "Unknown language format: #{language.inspect}. Valid format example is: 'en'"
-      end
+      return if [2, 4, 5, 6].include?(language.size) && /^[A-Za-z-]+$/.match?(language)
+      raise ArgumentError,
+            "Unknown language format: #{language.inspect}. Valid format example is: 'en'"
     end
 
   end

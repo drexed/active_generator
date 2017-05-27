@@ -10,22 +10,16 @@ class EnvironmentGenerator < Rails::Generators::NamedBase
 
   private
 
-  ENVIRONMENTS = %w(development test production).freeze
+  ENVIRONMENTS = %w[development test production].freeze
 
   ENVIRONMENTS.each do |env|
     define_method("#{env}?") { environment == env }
   end
 
   def assert_valid_environment!
-    unless environment.nil?
-      unless ENVIRONMENTS.include?(environment)
-        raise ArgumentError,
-              [
-                "Unknown environment: #{environment.inspect}.",
-                "Valid options: #{ENVIRONMENTS.map(&:inspect).join(', ')}"
-              ].join(' ')
-      end
-    end
+    return if environment.nil? || ENVIRONMENTS.include?(environment)
+    raise ArgumentError, ["Unknown environment: #{environment.inspect}.",
+                          "Valid options: #{ENVIRONMENTS.map(&:inspect).join(', ')}"].join(' ')
   end
 
 end

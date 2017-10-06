@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 class ServiceGenerator < Rails::Generators::NamedBase
   source_root File.expand_path('../templates', __FILE__)
 
@@ -6,7 +7,7 @@ class ServiceGenerator < Rails::Generators::NamedBase
   end
 
   def generate_locale_file
-    return unless ActiveGenerator::Settings.config.autoload_service_generator_locale
+    return unless ActiveGenerator.config.autoload_service_generator_locale
     invoke('locale:service', [name])
   end
 

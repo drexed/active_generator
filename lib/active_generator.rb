@@ -1,6 +1,11 @@
+# frozen_string_literal: true
+
 require 'rails/generators'
-require 'active_generator/version'
-require 'active_generator/settings'
+
+%w[version configuration].each do |file_name|
+  require "active_generator/#{file_name}"
+end
+
 require 'generators/active_generator/install/install_generator'
 
 %w[environment initializer service view].each do |generator_name|

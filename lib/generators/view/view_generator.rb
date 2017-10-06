@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 require 'fileutils'
 
 class ViewGenerator < Rails::Generators::NamedBase
@@ -31,7 +32,7 @@ class ViewGenerator < Rails::Generators::NamedBase
   private
 
   def configuration
-    ActiveGenerator::Settings.config
+    ActiveGenerator.config
   end
 
 end

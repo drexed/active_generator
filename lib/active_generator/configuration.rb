@@ -1,4 +1,4 @@
-require 'dry-configurable'
+# frozen_string_literal: true
 
 module ActiveGenerator
   class Settings

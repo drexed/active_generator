@@ -1,20 +1,19 @@
+# frozen_string_literal: true
+
 require 'spec_helper'
 
-describe ActiveGenerator::Settings do
-
+describe ActiveGenerator::Configuration do
   after(:all) do
-    ActiveGenerator::Settings.configure do |config|
+    ActiveGenerator.configure do |config|
       config.autoload_controller_generator_locale = true
     end
   end
 
   describe '#configure' do
     it 'to be "91 test"' do
-      ActiveGenerator::Settings.configure do |config|
-        config.autoload_controller_generator_locale = '91 test'
-      end
+      ActiveGenerator.configurartion.autoload_controller_generator_locale = '91 test'
 
-      expect(ActiveGenerator::Settings.config.autoload_controller_generator_locale).to eq('91 test')
+      expect(ActiveGenerator.config.autoload_controller_generator_locale).to eq('91 test')
     end
   end
 

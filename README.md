@@ -2,7 +2,6 @@
 
 [![Gem Version](https://badge.fury.io/rb/active_generator.svg)](http://badge.fury.io/rb/active_generator)
 [![Build Status](https://travis-ci.org/drexed/active_generator.svg?branch=master)](https://travis-ci.org/drexed/active_generator)
-[![Coverage Status](https://coveralls.io/repos/github/drexed/active_generator/badge.svg?branch=master)](https://coveralls.io/github/drexed/active_generator?branch=master)
 
 ActiveGenerator extends the base rails generators with commonly used generators.
 
@@ -37,7 +36,7 @@ Or install it yourself as:
 ``../config/initalizers/active_generator.rb``
 
 ```ruby
-ActiveGenerator::Settings.configure do |config|
+ActiveGenerator.configure do |config|
   config.autoload_controller_generator_locale = true
   config.autoload_helper_generator_locale = true
   config.autoload_job_generator_locale = true

@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 require 'rails/generators/erb/scaffold/scaffold_generator'
 require 'generators/rails/base'
 

@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 require 'rails/generators/erb/controller/controller_generator'
 require 'rails/generators/rails/controller/controller_generator'
 require 'generators/rails/base'

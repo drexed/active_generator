@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 class EnvironmentGenerator < Rails::Generators::NamedBase
   source_root File.expand_path('../templates', __FILE__)
   argument :environment, type: :string, required: false, default: nil,

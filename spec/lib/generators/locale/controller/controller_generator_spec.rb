@@ -10,24 +10,26 @@ describe Locale::ControllerGenerator, type: :generator do
     run_generator(%w(v1/social/twitter gb))
   end
 
-  it 'to be true' do
-    sample_path = 'spec/lib/generators/tmp/config/locales/en/controllers/sample.yml'
+  describe '#generator' do
+    it 'to be true' do
+      sample_path = 'spec/lib/generators/tmp/config/locales/en/controllers/sample.yml'
 
-    expect_file = File.read('spec/support/generators/locales/controllers/sample.yml')
-    sample_file = File.read(sample_path)
+      expect_file = File.read('spec/support/generators/locales/controllers/sample.yml')
+      sample_file = File.read(sample_path)
 
-    expect(File.exist?(sample_path)).to eq(true)
-    expect(sample_file).to eq(expect_file)
-  end
+      expect(File.exist?(sample_path)).to eq(true)
+      expect(sample_file).to eq(expect_file)
+    end
 
-  it 'to be true' do
-    sample_path = 'spec/lib/generators/tmp/config/locales/gb/controllers/v1/social/twitter.yml'
+    it 'to be true' do
+      sample_path = 'spec/lib/generators/tmp/config/locales/gb/controllers/v1/social/twitter.yml'
 
-    expect_file = File.read('spec/support/generators/locales/controllers/twitter.yml')
-    sample_file = File.read(sample_path)
+      expect_file = File.read('spec/support/generators/locales/controllers/twitter.yml')
+      sample_file = File.read(sample_path)
 
-    expect(File.exist?(sample_path)).to eq(true)
-    expect(sample_file).to eq(expect_file)
+      expect(File.exist?(sample_path)).to eq(true)
+      expect(sample_file).to eq(expect_file)
+    end
   end
 
 end

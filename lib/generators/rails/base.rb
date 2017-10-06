@@ -1,11 +1,12 @@
 # frozen_string_literal: true
+
 module Rails
   module Base
 
     private
 
     def configuration
-      ActiveGenerator.config
+      ActiveGenerator.configuration
     end
 
   end

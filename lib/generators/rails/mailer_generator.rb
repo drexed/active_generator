@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 require 'rails/generators/erb/mailer/mailer_generator'
 require 'rails/generators/mailer/mailer_generator'
 require 'generators/rails/base'

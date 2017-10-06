@@ -11,9 +11,9 @@ describe ActiveGenerator::Configuration do
 
   describe '#configure' do
     it 'to be "91 test"' do
-      ActiveGenerator.configurartion.autoload_controller_generator_locale = '91 test'
+      ActiveGenerator.configuration.autoload_controller_generator_locale = '91 test'
 
-      expect(ActiveGenerator.config.autoload_controller_generator_locale).to eq('91 test')
+      expect(ActiveGenerator.configuration.autoload_controller_generator_locale).to eq('91 test')
     end
   end
 

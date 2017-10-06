@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 require 'active_generator/base'
 require 'generators/locale/base'
 

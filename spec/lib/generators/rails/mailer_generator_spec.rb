@@ -12,16 +12,16 @@ describe Rails::Generators::MailerGenerator, type: :generator do
 
   describe '#generator' do
     it 'to be true' do
-      sample_mailer_path = 'spec/lib/generators/tmp/config/locales/en/mailers/sample.yml'
-      sample_view_path   = 'spec/lib/generators/tmp/config/locales/en/views/sample.yml'
+      sample_mailer_path = 'spec/lib/generators/tmp/config/locales/en/mailers/sample_mailer.yml'
+      sample_view_path   = 'spec/lib/generators/tmp/config/locales/en/views/sample_mailer.yml'
 
       expect(File.exist?(sample_mailer_path)).to eq(true)
       expect(File.exist?(sample_view_path)).to eq(true)
     end
 
     it 'to be true' do
-      sample_mailer_path = 'spec/lib/generators/tmp/config/locales/en/mailers/v1/social/twitter.yml'
-      sample_view_path   = 'spec/lib/generators/tmp/config/locales/en/views/v1/social/twitter.yml'
+      sample_mailer_path = 'spec/lib/generators/tmp/config/locales/en/mailers/v1/social/twitter_mailer.yml'
+      sample_view_path   = 'spec/lib/generators/tmp/config/locales/en/views/v1/social/twitter_mailer.yml'
 
       expect(File.exist?(sample_mailer_path)).to eq(true)
       expect(File.exist?(sample_view_path)).to eq(true)

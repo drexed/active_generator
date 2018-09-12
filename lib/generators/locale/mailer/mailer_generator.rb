@@ -13,7 +13,9 @@ module Locale
 
     def create_mailer_file
       assert_valid_language!
-      path = File.join("config/locales/#{language}/mailers", namespace_path, "#{file_name}.yml")
+
+      name = "#{file_name}_mailer.yml"
+      path = File.join("config/locales/#{language}/mailers", namespace_path, name)
 
       template('mailer.yml', path)
     end

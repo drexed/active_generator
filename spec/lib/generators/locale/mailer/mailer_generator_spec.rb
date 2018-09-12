@@ -12,9 +12,9 @@ describe Locale::MailerGenerator, type: :generator do
 
   describe '#generator' do
     it 'to be true' do
-      sample_path = 'spec/lib/generators/tmp/config/locales/en/mailers/sample.yml'
+      sample_path = 'spec/lib/generators/tmp/config/locales/en/mailers/sample_mailer.yml'
 
-      expect_file = File.read('spec/support/generators/locales/mailers/sample.yml')
+      expect_file = File.read('spec/support/generators/locales/mailers/sample_mailer.yml')
       sample_file = File.read(sample_path)
 
       expect(File.exist?(sample_path)).to eq(true)
@@ -22,9 +22,9 @@ describe Locale::MailerGenerator, type: :generator do
     end
 
     it 'to be true' do
-      sample_path = 'spec/lib/generators/tmp/config/locales/gb/mailers/v1/social/twitter.yml'
+      sample_path = 'spec/lib/generators/tmp/config/locales/gb/mailers/v1/social/twitter_mailer.yml'
 
-      expect_file = File.read('spec/support/generators/locales/mailers/twitter.yml')
+      expect_file = File.read('spec/support/generators/locales/mailers/twitter_mailer.yml')
       sample_file = File.read(sample_path)
 
       expect(File.exist?(sample_path)).to eq(true)

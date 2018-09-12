@@ -10,7 +10,7 @@ module Erb
       include Rails::Base
 
       def generate_locale_file
-        invoke('locale:view', [name]) if configuration.autoload_view_generator_locale
+        invoke('locale:view', [expanded_name]) if configuration.autoload_view_generator_locale
       end
 
       def generate_test_file
@@ -18,7 +18,13 @@ module Erb
 
         return if framework.nil?
 
-        invoke("#{framework}:view", [name]) rescue nil
+        invoke("#{framework}:view", [expanded_name]) rescue nil
+      end
+
+      private
+
+      def expanded_name
+        "#{name}_mailer"
       end
 
     end

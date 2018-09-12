@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-# coding: utf-8
-
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'active_generator/version'
@@ -25,10 +23,10 @@ Gem::Specification.new do |spec|
   spec.add_runtime_dependency 'rails'
 
   spec.add_development_dependency 'bundler'
-  spec.add_development_dependency 'rake'
-  spec.add_development_dependency 'rspec'
-  spec.add_development_dependency 'generator_spec'
   spec.add_development_dependency 'fasterer'
+  spec.add_development_dependency 'generator_spec'
+  spec.add_development_dependency 'rake'
   spec.add_development_dependency 'reek'
+  spec.add_development_dependency 'rspec'
   spec.add_development_dependency 'rubocop'
 end

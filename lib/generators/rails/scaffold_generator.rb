@@ -16,6 +16,7 @@ module Erb
         framework = configuration.test_framework
 
         return if framework.nil?
+
         invoke("#{framework}:view", [name]) rescue nil
       end
 

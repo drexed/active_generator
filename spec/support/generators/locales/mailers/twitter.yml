@@ -2,14 +2,14 @@
 # Table of Contents
 #==================================================
 # V1 social
-  # Twitter
+  # Twitter mailer
     # Methods
       # TODO
 
 gb:
   mailers:
     v1_social:
-      twitter:
+      twitter_mailer:
 
         #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
         # Methods

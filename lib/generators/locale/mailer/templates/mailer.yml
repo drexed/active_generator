@@ -3,14 +3,14 @@
 #==================================================
 <% if namespaced? -%>
 # <%= namespace_human %>
-  # <%= file_name_human %>
+  # <%= file_name_human %> mailer
     # Methods
       # TODO
 
 <%= language %>:
   mailers:
     <%= namespace_table %>:
-      <%= file_name_table %>:
+      <%= file_name_table %>_mailer:
 
         #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
         # Methods
@@ -27,7 +27,7 @@
 
 <%= language %>:
   mailers:
-    <%= file_name_table %>:
+    <%= file_name_table %>_mailer:
 
       #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
       # Methods

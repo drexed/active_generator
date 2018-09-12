@@ -7,7 +7,7 @@
 
 en:
   mailers:
-    sample:
+    sample_mailer:
 
       #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
       # Methods

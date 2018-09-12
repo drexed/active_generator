@@ -20,6 +20,7 @@ class EnvironmentGenerator < Rails::Generators::NamedBase
 
   def assert_valid_environment!
     return if environment.nil? || ENVIRONMENTS.include?(environment)
+
     raise ArgumentError, ["Unknown environment: #{environment.inspect}.",
                           "Valid options: #{ENVIRONMENTS.map(&:inspect).join(', ')}"].join(' ')
   end

@@ -8,6 +8,7 @@ module Rails
 
       def generate_locale_file
         return unless ActiveGenerator.configuration.autoload_task_generator_locale
+
         invoke('locale:task', [name])
       end
 

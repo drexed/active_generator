@@ -11,11 +11,13 @@ Layout/EmptyLinesAroundModuleBody:
   Enabled: false
 LineLength:
   Max: 100
-Lint/RescueWithoutErrorClass:
-  Enabled: false
 Lint/ScriptPermission:
   Enabled: false
 Style/Documentation:
   Enabled: false
+Style/ExpandPathArguments:
+  Enabled: false
 Style/RescueModifier:
+  Enabled: false
+Style/RescueStandardError:
   Enabled: false

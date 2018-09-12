@@ -27,6 +27,7 @@ class ViewGenerator < Rails::Generators::NamedBase
     framework = configuration.test_framework
 
     return if framework.nil?
+
     invoke("#{framework}:view", [name]) rescue nil
   end
 

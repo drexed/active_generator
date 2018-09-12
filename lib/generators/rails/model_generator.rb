@@ -30,6 +30,7 @@ module ActiveRecord
         framework = configuration.test_framework
 
         return if framework.nil?
+
         invoke("#{framework}:model", [name]) rescue nil
       end
 

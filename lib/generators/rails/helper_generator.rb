@@ -16,6 +16,7 @@ module Rails
         framework = configuration.test_framework
 
         return if framework.nil?
+
         invoke("#{framework}:helper", [name]) rescue nil
       end
 
